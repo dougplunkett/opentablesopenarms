@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mockup A — Globe Hero | Open Tables – Open Arms</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .mock-banner { background: var(--gold); color: var(--navy); text-align: center; font-weight: 700; padding: 8px; font-size: 0.9rem; }
+    .globe-hero {
+      background:
+        radial-gradient(900px 600px at 50% 35%, rgba(201,162,74,0.20), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+      padding: 40px 16px 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .globe-wrap {
+      position: relative;
+      width: min(620px, 92vw);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+    }
+    .globe-svg { width: 100%; height: 100%; overflow: visible; display: block; }
+    .arc-text { font-family: "Playfair Display", serif; font-weight: 800; fill: var(--navy); letter-spacing: 1px; }
+    .arc-text-top { font-size: 40px; }
+    .arc-text-bottom { font-size: 22px; fill: var(--gold-dark); letter-spacing: 3px; }
+    .globe-logo-img { } /* image rendered inside svg */
+
+    /* Buttons flanking the globe */
+    .globe-actions { position: absolute; inset: 0; pointer-events: none; }
+    .globe-actions .btn { position: absolute; pointer-events: auto; box-shadow: var(--shadow); }
+    .globe-btn-left { left: -6%; top: 60%; }
+    .globe-btn-right { right: -6%; top: 60%; }
+
+    .globe-sub { text-align: center; max-width: 560px; margin: 18px auto 0; color: var(--muted); font-size: 1.05rem; }
+
+    @media (max-width: 720px) {
+      .arc-text-top { font-size: 30px; }
+      .arc-text-bottom { font-size: 16px; letter-spacing: 2px; }
+      .globe-actions { position: static; display: flex; gap: 12px; justify-content: center; margin-top: 18px; }
+      .globe-actions .btn { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-banner">MOCKUP A — “Globe” hero (logo enlarged, name &amp; buttons wrapped around it)</div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top"><img src="assets/logo.png" alt="logo" class="brand-logo" /><span class="brand-name">Open Tables<span class="brand-dash">–</span>Open Arms</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#help">Get Involved</a></li>
+        <li><a class="btn btn-donate" href="#donate">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="globe-hero" id="top">
+    <div class="globe-wrap">
+      <svg class="globe-svg" viewBox="0 0 640 640" role="img" aria-label="Open Tables - Open Arms">
+        <defs>
+          <path id="arcTop" d="M 70,330 A 250,250 0 0 1 570,330" />
+          <path id="arcBottom" d="M 80,330 A 240,240 0 0 0 560,330" />
+          <clipPath id="globeClip"><circle cx="320" cy="330" r="180" /></clipPath>
+        </defs>
+
+        <!-- soft ring behind logo -->
+        <circle cx="320" cy="330" r="192" fill="#fff" stroke="var(--gold)" stroke-width="3" />
+        <image href="assets/logo.png" x="140" y="150" width="360" height="360" clip-path="url(#globeClip)" />
+
+        <text class="arc-text arc-text-top"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">OPEN TABLES — OPEN ARMS</textPath></text>
+        <text class="arc-text arc-text-bottom"><textPath href="#arcBottom" startOffset="50%" text-anchor="middle">FOOD · DIGNITY · HOPE · EVERYONE MATTERS</textPath></text>
+      </svg>
+
+      <div class="globe-actions">
+        <a class="btn btn-donate globe-btn-left" href="#donate">Donate</a>
+        <a class="btn btn-outline globe-btn-right" href="#help">Get Involved</a>
+      </div>
+    </div>
+    <p class="globe-sub">A nonprofit food truck bringing hot, nourishing meals to homeless veterans, homeless communities, and impoverished neighborhoods.</p>
+  </section>
+
+  <section class="section center"><div class="container narrow"><p class="eyebrow center">Preview</p><h2>Scroll content continues below…</h2><p>This page only changes the hero. The rest of the site (Story, Mission, Get Involved, Donate, Contact) stays the same as the main draft.</p></div></section>
+</body>
+</html>
