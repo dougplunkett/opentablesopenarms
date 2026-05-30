@@ -73,6 +73,18 @@ p { margin: 0 0 1rem; }
 .btn-outline:hover { background: var(--navy); color: #fff; }
 .btn-lg { padding: 0.95rem 2.2rem; font-size: 1.1rem; }
 
+/* Gold top banner */
+.topbar {
+  background: var(--gold);
+  color: var(--navy);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  padding: 9px 16px;
+}
+.topbar strong { font-weight: 800; }
+
 /* Header */
 .site-header {
   position: sticky;
